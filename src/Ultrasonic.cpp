@@ -48,7 +48,7 @@ unsigned int Ultrasonic::timing() {
 
   if (threePins)
     pinMode(trig, INPUT);
-  
+
   previousMicros = micros();
   while(!digitalRead(echo) && (micros() - previousMicros) <= timeout); // wait for the echo pin HIGH or timeout
   previousMicros = micros();
@@ -72,4 +72,8 @@ unsigned int Ultrasonic::read(uint8_t und) {
  */
 unsigned int Ultrasonic::distanceRead(uint8_t und) {
   return read(und);
+}
+
+unsigned int Ultrasonic::readTiming(){
+  return timing();
 }
