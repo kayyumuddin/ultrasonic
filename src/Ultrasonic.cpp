@@ -43,7 +43,7 @@ unsigned int Ultrasonic::timing() {
   digitalWrite(trig, LOW);
   delayMicroseconds(2);
   digitalWrite(trig, HIGH);
-  delayMicroseconds(10);
+  delayMicroseconds(20);
   digitalWrite(trig, LOW);
 
   if (threePins)
